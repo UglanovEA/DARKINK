@@ -96,6 +96,7 @@ body {
   position: relative;
   max-width: 1400px;
   margin: 0 auto;
+  padding: 0px 15px;
   z-index: 1;
 }
 
@@ -118,6 +119,17 @@ body {
   height: 100%;
   background: rgba(255, 255, 255, 0.1);
   z-index: 0;
+}
+
+.title {
+  font-size: 50px;
+  font-weight: 700;
+  -webkit-transform: scale(1, 0.9);
+      -ms-transform: scale(1, 0.9);
+          transform: scale(1, 0.9);
+  border-left: 1px solid #f13f3f;
+  padding-left: 20px;
+  margin-bottom: 45px;
 }
 
 @-webkit-keyframes background_slide {
@@ -615,9 +627,98 @@ body {
           justify-content: flex-end;
 }
 
+.whatWeDo__wrap {
+  padding: 150px 0 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.whatWeDo__services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 30px;
+}
+
+.whatWeDo__img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 441px;
+          flex: 0 0 441px;
+}
+
+.service {
+  width: 320px;
+  padding: 10px 10px;
+}
+
+.service__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 1.5px;
+}
+
+.service__icon {
+  width: 65px;
+  height: 68px;
+}
+
+._no-webp .service__icon_1{
+  background-image: url("../img/whatwedo/icon_1.png"); }
+
+._no-webp .service__icon_2{
+  background-image: url("../img/whatwedo/icon_2.png"); }
+
+._no-webp .service__icon_3{
+  background-image: url("../img/whatwedo/icon_3.png"); }
+
+._no-webp .service__icon_4{
+  background-image: url("../img/whatwedo/icon_4.png"); }
+
+.service__name {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+  -webkit-transition: color 0.3s ease 0s;
+  -o-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+  margin-left: 15px;
+}
+
+.service__name:hover {
+  color: #f13f3f;
+}
+
+.service__text {
+  color: #9b9b9b;
+  font-size: 18px;
+  line-height: 1.4;
+  padding: 20px 0;
+}
+
 @media (min-width: 500px) {
   .header__burger.open {
     right: 215px;
+  }
+}
+
+@media (min-width: 770px) {
+  .whatWeDo__block {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 720px;
+            flex: 0 1 720px;
   }
 }
 
@@ -701,4 +802,26 @@ body {
   .salon__subtitle {
     display: none;
   }
+
+  .whatWeDo__block {
+    text-align: center;
+  }
+
+  .whatWeDo__img {
+    display: none;
+  }
 }
+
+@media (max-width: 770px) {
+  ._container:after {
+    display: none;
+  }
+}
+
+._webp .service__icon_1{ background-image: url(../img/whatwedo/icon_1.webp); }
+
+._webp .service__icon_2{ background-image: url(../img/whatwedo/icon_2.webp); }
+
+._webp .service__icon_3{ background-image: url(../img/whatwedo/icon_3.webp); }
+
+._webp .service__icon_4{ background-image: url(../img/whatwedo/icon_4.webp); }
