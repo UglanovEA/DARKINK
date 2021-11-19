@@ -53,7 +53,7 @@ $(function () {
 	}
 });
 
-const swiper = new Swiper(".ourStaff__team", {
+new Swiper(".ourStaff__team", {
 	slidesPerView: 3,
 	spaceBetween: 30,
 	autoplay: {
@@ -80,5 +80,18 @@ const swiper = new Swiper(".ourStaff__team", {
 		1171: {
 			slidesPerView: 3,
 		},
+	},
+});
+
+new Swiper(".gallery__slider", {
+	slidesPerView: 3,
+	autoplay: {
+		delay: 3000,
+		disableOnInteraction: true,
+	},
+	speed: 800,
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
 	},
 });
