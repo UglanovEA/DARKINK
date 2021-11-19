@@ -52,3 +52,33 @@ $(function () {
 		}
 	}
 });
+
+const swiper = new Swiper(".ourStaff__team", {
+	slidesPerView: 3,
+	spaceBetween: 30,
+	autoplay: {
+		delay: 3000,
+		disableOnInteraction: true,
+	},
+	speed: 800,
+	breakpoints: {
+		320: {
+			slidesPerView: 1,
+		},
+		460: {
+			slidesPerView: 1.2,
+		},
+		600: {
+			slidesPerView: 1.6,
+		},
+		725: {
+			slidesPerView: 2,
+		},
+		1000: {
+			slidesPerView: 2.5,
+		},
+		1171: {
+			slidesPerView: 3,
+		},
+	},
+});
