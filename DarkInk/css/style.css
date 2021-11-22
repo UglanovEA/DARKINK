@@ -163,6 +163,11 @@ body {
   width: 100%;
 }
 
+#map {
+  width: 100%;
+  height: 400px;
+}
+
 @-webkit-keyframes background_slide {
   0% {
     -webkit-transform: scale(1.04);
@@ -867,6 +872,10 @@ body {
   padding-bottom: 40px;
 }
 
+.testimonials__comment:last-child {
+  padding-bottom: 0px;
+}
+
 .testimonials__text {
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.7;
@@ -974,20 +983,28 @@ body {
 }
 
 .gallery__slider {
-  padding-bottom: 50px;
+  overflow: hidden;
 }
 
-.swiper-slide {
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   cursor: pointer;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
 
-.swiper-slide:hover {
+.gallery__img:hover {
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+.gallery__img_wrap {
+  overflow: hidden;
 }
 
 .swiper-button-prev {
@@ -1030,6 +1047,127 @@ body {
   color: #f13f3f;
 }
 
+.callback__wrap {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.callback__contain {
+  max-width: 615px;
+}
+
+.callback__text {
+  color: #9b9b9b;
+  font-size: 18px;
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+
+.callback__img {
+  max-width: 500px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  opacity: 0.4;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.callback__img_wrap {
+  display: none;
+}
+
+.form {
+  padding-left: 20px;
+}
+
+.form__wrap {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.form__input {
+  width: 100%;
+  background: none;
+  color: #a1a1a1;
+  border: 1px solid #a1a1a1;
+  outline: 0;
+  padding: 15px 20px 15px 50px;
+}
+
+.form__label {
+  width: 90%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50px;
+  color: #9b9b9b;
+  font-size: 14px;
+  line-height: 3.3;
+  cursor: text;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.form__label_active {
+  opacity: 0;
+  z-index: -10;
+}
+
+.form__error {
+  display: none;
+  position: absolute;
+  top: 3px;
+  right: 20px;
+  color: #f13f3f;
+  font-size: 10px;
+}
+
+.form__icon {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  color: #f13f3f;
+  font-size: 20px;
+  line-height: 2.3;
+}
+
+.form__icon_1:before {
+  content: "\f007";
+}
+
+.form__icon_2:before {
+  content: "\f0e0";
+}
+
+.form__icon_3:before {
+  content: "\f095";
+}
+
+.form__icon_4:before {
+  content: "\f040";
+}
+
+.form__btn {
+  background: none;
+  border: 0;
+}
+
+.validate {
+  border: 1px solid #f13f3f;
+}
+
+#check_4 {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 200px;
+  min-height: 200px;
+  overflow: auto;
+  resize: none;
+}
+
 @media (min-width: 500px) {
   .header__burger.open {
     right: 215px;
@@ -1041,6 +1179,47 @@ body {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 720px;
             flex: 0 1 720px;
+  }
+}
+
+@media (min-width: 756px) {
+  .callback__img_wrap {
+    display: block;
+  }
+}
+
+@media (min-width: 1020px) {
+  .callback__wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: self-end;
+        -ms-flex-align: self-end;
+            align-items: self-end;
+  }
+
+  .callback__contain {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 615px;
+            flex: 0 1 615px;
+  }
+
+  .callback__img {
+    opacity: 1;
+    position: relative;
+  }
+
+  .callback__img_wrap {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 557px;
+            flex: 0 1 557px;
   }
 }
 
@@ -1067,6 +1246,10 @@ body {
 
   .testimonials__comment {
     max-width: 520px;
+  }
+
+  .testimonials__comment:last-child {
+    padding-bottom: 40px;
   }
 
   .testimonials__comment:before {
@@ -1200,8 +1383,16 @@ body {
     padding-bottom: calc(40px + 10 * ((100vw - 320px) / 1080));
   }
 
-  .gallery__slider {
+  .callback__wrap {
+    padding-top: calc(40px + 10 * ((100vw - 320px) / 1080));
+  }
+
+  .callback__wrap {
     padding-bottom: calc(40px + 10 * ((100vw - 320px) / 1080));
+  }
+
+  #check_4 {
+    min-height: calc(100px + 100 * ((100vw - 320px) / 1080));
   }
 }
 
