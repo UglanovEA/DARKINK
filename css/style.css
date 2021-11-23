@@ -670,18 +670,22 @@ body {
 
 .service__icon_1 {
   background: url("../img/whatwedo/icon_1.webp") no-repeat center;
+  background-size: contain;
 }
 
 .service__icon_2 {
   background: url("../img/whatwedo/icon_2.webp") no-repeat center;
+  background-size: contain;
 }
 
 .service__icon_3 {
   background: url("../img/whatwedo/icon_3.webp") no-repeat center;
+  background-size: contain;
 }
 
 .service__icon_4 {
   background: url("../img/whatwedo/icon_4.webp") no-repeat center;
+  background-size: contain;
 }
 
 .service__name {
