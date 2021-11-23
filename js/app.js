@@ -1,7 +1,7 @@
 $(function () {
 //hide preloader
 $(".preloader").fadeOut();
-})});
+});
 
 $(function () {
 	//animation burger line
