@@ -1,14 +1,6 @@
 $(function () {
 //hide preloader
 $(".preloader").fadeOut();
-
-//animation burger line
-var headerBurger = $(".header__burger"),
-	headerMenu = $(".header__nav");
-
-headerBurger.on("click", function () {
-	$(this).toggleClass("open");
-	headerMenu.toggleClass("slide");
 })});
 
 $(function () {
