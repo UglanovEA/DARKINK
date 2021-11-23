@@ -9,7 +9,7 @@ var headerBurger = $(".header__burger"),
 headerBurger.on("click", function () {
 	$(this).toggleClass("open");
 	headerMenu.toggleClass("slide");
-})};
+})});
 
 $(function () {
 	//animation burger line
