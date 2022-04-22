@@ -1,0 +1,162 @@
+.header {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-height: rem(60);
+	@media (max-width: $mobile) {
+		min-height: rem(5);
+	}
+	// .header__wrapper
+	&__wrapper {
+		width: 100%;
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 5;
+		display: flex;
+		column-gap: rem(30);
+		justify-content: space-between;
+		padding: rem(22) 5%;
+		z-index: 11;
+		transition: all 0.3s ease 0s;
+	}
+	// .header__logo
+	&__logo {
+	}
+	// .header__menu
+	&__menu {
+	}
+}
+.menu {
+	// .menu__icon
+	&__icon {
+	}
+	// .menu__body
+	&__body {
+		background-color: #202020;
+		box-shadow: -1px 0px 10px -3px rgba(0, 0, 0, 0.75);
+		width: rem(300);
+		height: 100vh;
+		position: fixed;
+		top: 0;
+		right: -100%;
+		transition: all 0.3s ease 0s;
+		padding-top: rem(100);
+		.menu-open & {
+			right: 0;
+		}
+	}
+	// .menu__list
+	&__list {
+		display: flex;
+		flex-direction: column;
+		border-top: rem(1) solid rgba(255, 255, 255, 0.1);
+	}
+	// .menu__item
+	&__item {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		padding: rem(15) rem(40);
+		border-bottom: rem(1) solid rgba(255, 255, 255, 0.1);
+	}
+	// .menu__link
+	&__link {
+		flex: 1 1 90%;
+		font-size: rem(20);
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $colorRed;
+			}
+		}
+		// .menu__link_sublist
+		&_sublist {
+			display: flex;
+			align-items: center;
+			color: $colorText;
+			line-height: 2.8;
+			transition: all 0.3s ease 0s;
+			&:hover {
+				color: $mainColor;
+				padding-left: rem(10);
+				&:before {
+					opacity: 1;
+				}
+			}
+			&:before {
+				color: $colorRed;
+				opacity: 0;
+				transition: all 0.3s ease 0s;
+				margin-right: rem(10);
+			}
+		}
+	}
+	// .menu__link-active
+	&__link-active {
+		color: $colorRed;
+	}
+	// .menu__arrow
+	&__arrow {
+		transition: all 0.3s ease 0s;
+		&._spoller-active {
+			transform: rotate(-180deg);
+		}
+	}
+	// .menu__sublist
+	&__sublist {
+		padding-top: rem(10);
+	}
+}
+
+//Burger
+.icon-menu {
+	display: none;
+
+	display: block;
+	position: relative;
+	width: rem(50);
+	height: rem(25);
+	cursor: pointer;
+	z-index: 5;
+	span,
+	&::before,
+	&::after {
+		content: "";
+		transition: all 0.3s ease 0s;
+		right: 0;
+		position: absolute;
+		width: rem(40);
+		height: rem(3);
+		background-color: $colorRed;
+	}
+	&::before {
+		width: 100%;
+		top: 0;
+	}
+	&::after {
+		width: rem(30);
+		bottom: 0;
+	}
+	span {
+		top: calc(50% - rem(1));
+	}
+	.menu-open & {
+		span {
+			width: 0;
+		}
+		&::before,
+		&::after {
+			width: 100%;
+		}
+		&::before {
+			top: calc(50% - rem(1));
+			transform: rotate(-45deg);
+		}
+		&::after {
+			bottom: calc(50% - rem(1));
+			transform: rotate(45deg);
+		}
+	}
+}
