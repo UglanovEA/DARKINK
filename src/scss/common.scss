@@ -1,1 +1,46 @@
-// Заголовки, общие БЄМ блоки и проче...
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	color: $mainColor;
+	font-size: rem(16);
+	font-weight: 500;
+	text-transform: uppercase;
+	text-align: center;
+	padding: rem(15) rem(25);
+	z-index: 1;
+	&:before {
+		content: "";
+		height: 100%;
+		width: 65%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: $colorRed;
+		transition: width 0.3s ease 0s;
+		z-index: -1;
+	}
+	&:hover {
+		&:before {
+			width: 100%;
+		}
+	}
+}
+.container {
+	&:before,
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		width: rem(1);
+		height: 100%;
+		border-right: rem(1) solid rgba(255, 255, 255, 0.1);
+	}
+	&:before {
+		left: 13.5%;
+	}
+	&:after {
+		right: 48%;
+	}
+}

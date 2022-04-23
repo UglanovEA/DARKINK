@@ -4,9 +4,6 @@
 	top: 0;
 	left: 0;
 	min-height: rem(60);
-	@media (max-width: $mobile) {
-		min-height: rem(5);
-	}
 	// .header__wrapper
 	&__wrapper {
 		width: 100%;
@@ -109,7 +106,6 @@
 		padding-top: rem(10);
 	}
 }
-
 //Burger
 .icon-menu {
 	display: none;

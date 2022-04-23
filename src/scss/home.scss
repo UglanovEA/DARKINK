@@ -1,3 +1,91 @@
-//====================================================================================================
+.main {
+	position: relative;
+	background: linear-gradient(180deg, rgba(31, 31, 31, 1) 37%, rgba(26, 26, 26, 1) 100%);
+	@include adaptiveValue("padding-top", 100, 70);
+	@include adaptiveValue("padding-bottom", 100, 50);
+	// .main__container
+	&__container {
+	}
+	// .main__content
+	&__content {
+		position: relative;
+		z-index: 2;
+	}
+	// .main__title
+	&__title {
+		color: $colorRed;
+		text-transform: uppercase;
+		@include adaptiveValue("font-size", 172, 72);
+		@include adaptiveValue("margin-left", -15, -6);
 
-//====================================================================================================
+		& span {
+			display: inline-block;
+			color: $mainColor;
+			@include adaptiveValue("font-size", 80, 34);
+			transform: rotate(-90deg) translate(25%, -45%);
+			@include adaptiveValue("margin-left", 40, 20);
+		}
+	}
+	// .main__subtitle
+	&__subtitle {
+		text-transform: uppercase;
+		@include adaptiveValue("font-size", 76, 36);
+		&:not(:last-child) {
+			margin-bottom: em(40, 76);
+		}
+	}
+	// .main__description
+	&__description {
+		color: $colorText;
+		@include adaptiveValue("font-size", 20, 16);
+		line-height: 1.3;
+		&:not(:last-child) {
+			margin-bottom: em(60, 20);
+		}
+	}
+	// .main__link
+	&__link {
+		@include adaptiveValue("margin-bottom", 60, 30);
+	}
+	// .main__img
+	&__img {
+		max-width: 420px;
+		position: absolute;
+		bottom: 0;
+		right: 80px;
+		& img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+	// .main__contacts
+	&__contacts {
+		position: relative;
+		z-index: 2;
+		max-width: rem(550);
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		color: $colorRed;
+		font-size: rem(15);
+		margin: 0 auto;
+	}
+	// .main__call
+	&__call {
+		& a {
+			color: $mainColor;
+			transition: color 0.3s ease 0s;
+			margin-left: rem(15);
+			&:hover {
+				color: $colorRed;
+			}
+		}
+	}
+	// .main__hours
+	&__hours {
+		& span {
+			color: #ffffff;
+			margin-left: rem(15);
+		}
+	}
+}

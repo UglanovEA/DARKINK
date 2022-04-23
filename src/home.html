@@ -1,16 +1,31 @@
 <!DOCTYPE html>
 <html lang="ru">
-	@@include('html/_head.htm',{
-	"title":"Главная"
-	})
+	@@include('html/_head.htm',{ "title":"Главная" })
 	<body>
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
-			<main class="page">
+			<main class="main">
+				<div class="main__container container">
+					<div class="main__content">
+						<h1 class="main__title">dark<span>ink</span></h1>
+						<h2 class="main__subtitle">tattoo salon</h2>
+						<p class="main__description">
+							Our tattooists use 100% safe technology to create stunning artworks. They use <br />
+							certified equipment, which guarantees the best possible results.
+						</p>
+						<a href="#!" class="main__link btn">read more</a>
+					</div>
+					<div class="main__img">
+						<img src="img/person.png" alt="person" />
+					</div>
+					<div class="main__contacts">
+						<div class="main__call">Free Call:<a href="tel:0731231212">(073) 123-12-12</a></div>
+						<div class="main__hours">Opening Hours:<span>10 am-8 pm, Mn-Fr</span></div>
+					</div>
+				</div>
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
-		@@include('html/_popup.htm',{})
-		@@include('html/_js.htm',{})
+		@@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
 	</body>
 </html>
