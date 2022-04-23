@@ -1,4 +1,5 @@
 .footer {
+	position: relative;
 	@include adaptiveValue("padding-top", 50, 30);
 	@include adaptiveValue("padding-bottom", 50, 30);
 	// .footer__container
