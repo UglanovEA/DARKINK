@@ -1,3 +1,4 @@
+/*==================== MAIN ====================*/
 .main {
 	position: relative;
 	background: linear-gradient(180deg, rgba(31, 31, 31, 1) 37%, rgba(26, 26, 26, 1) 100%);
@@ -87,5 +88,62 @@
 			color: #ffffff;
 			margin-left: rem(15);
 		}
+	}
+}
+/*==================== ABOUT ====================*/
+.about {
+	@include adaptiveValue("padding-top", 100, 30);
+	@include adaptiveValue("padding-bottom", 50, 30);
+	// .about__container
+	&__container {
+		display: flex;
+	}
+	// .about__images
+	&__images {
+	}
+	// .about__image
+	&__image {
+	}
+	// .about__subtitle
+	&__subtitle {
+	}
+	// .about__content
+	&__content {
+		position: relative;
+		padding-left: rem(20);
+		&:before {
+			content: "";
+			width: rem(1);
+			height: rem(50);
+			position: absolute;
+			left: 0;
+			top: rem(6);
+			background: $colorRed;
+		}
+	}
+	// .about__title
+	&__title {
+		@include adaptiveValue("font-size", 54, 30);
+		text-transform: uppercase;
+		&:not(:last-child) {
+			margin-bottom: em(45, 54);
+		}
+	}
+	// .about__text
+	&__text {
+		font-size: rem(18);
+		line-height: 1.4;
+		&:not(:last-child) {
+			margin-bottom: em(20, 18);
+		}
+	}
+	// .about__text-grey
+	&__text-grey {
+		color: $colorText;
+	}
+	// .about__sign
+	&__sign {
+		display: flex;
+		justify-content: flex-end;
 	}
 }
