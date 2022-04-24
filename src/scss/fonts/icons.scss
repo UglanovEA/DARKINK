@@ -14,6 +14,18 @@
 		display: block;
 	}
 }
+._icon-twitter:before {
+	content: "\e908";
+}
+._icon-pinterest:before {
+	content: "\e909";
+}
+._icon-instagram:before {
+	content: "\e90a";
+}
+._icon-facebook:before {
+	content: "\e90b";
+}
 ._icon-pencil:before {
 	content: "\e900";
 }

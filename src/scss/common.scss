@@ -1,4 +1,4 @@
-.btn {
+._btn {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
@@ -27,7 +27,7 @@
 		}
 	}
 }
-.container {
+._container {
 	&:before,
 	&::after {
 		content: "";
