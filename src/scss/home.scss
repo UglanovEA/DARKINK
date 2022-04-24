@@ -131,7 +131,6 @@
 	// .about__image
 	&__image {
 		width: 100%;
-
 		@media (min-width: $mobileSmall) {
 			max-width: rem(270);
 		}
@@ -157,17 +156,6 @@
 	}
 	// .about__content
 	&__content {
-		position: relative;
-		padding-left: rem(20);
-		&:before {
-			content: "";
-			width: rem(1);
-			height: rem(50);
-			position: absolute;
-			left: 0;
-			top: rem(6);
-			background: $colorRed;
-		}
 		@media (min-width: em(1062)) {
 			flex: 0 1 percent(620, 1400);
 		}
@@ -196,5 +184,81 @@
 	&__sign {
 		display: flex;
 		justify-content: flex-end;
+	}
+}
+/*==================== WORK ====================*/
+.works {
+	position: relative;
+	@include adaptiveValue("padding-top", 50, 30);
+	@include adaptiveValue("padding-bottom", 50, 30);
+	// .works__container
+	&__container {
+		@media (min-width: $tablet) {
+			display: grid;
+			grid-template-columns: 1fr rem(620);
+			// grid-template-columns: repeat(auto-fit, minmax(rem(320), 1fr));
+			@include adaptiveValue("gap", 50, 20);
+		}
+	}
+	// .works__content
+	&__content {
+		@media (max-width: $tablet) {
+			&:not(:last-child) {
+				margin-bottom: rem(30);
+			}
+		}
+	}
+	// .works__title
+	&__title {
+	}
+	// .works__items
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(rem(290), 1fr));
+		gap: rem(30);
+	}
+	// .works__item
+	&__item {
+	}
+	// .works__image
+	&__image {
+		display: flex;
+		justify-self: flex-end;
+		& img {
+			max-width: 100%;
+			height: auto;
+			object-fit: cover;
+		}
+		@media (max-width: $tablet) {
+			justify-content: center;
+		}
+	}
+}
+.item-work {
+	padding: rem(10);
+	display: grid;
+	grid-template-columns: rem(65) 1fr;
+	gap: rem(15);
+	align-items: center;
+	// .item-work__img
+	&__img {
+		width: rem(65);
+		height: rem(65);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	// .item-work__title
+	&__title {
+		@include adaptiveValue("font-size", 24, 18);
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	// .item-work__text
+	&__text {
+		grid-column: 1 / span 2;
+		color: $colorText;
+		font-size: rem(18);
+		line-height: 1.4;
 	}
 }

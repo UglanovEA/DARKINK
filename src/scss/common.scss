@@ -36,11 +36,33 @@
 		width: rem(1);
 		height: 100%;
 		border-right: rem(1) solid rgba(255, 255, 255, 0.1);
+		z-index: 0;
 	}
 	&:before {
 		left: 13.2%;
 	}
 	&:after {
 		right: 48%;
+	}
+}
+._title {
+	@include adaptiveValue("font-size", 50, 32);
+	font-weight: 700;
+	text-transform: uppercase;
+	&:not(:last-child) {
+		margin-bottom: em(45, 50);
+	}
+}
+._before {
+	position: relative;
+	@include adaptiveValue("padding-left", 20, 10);
+	&:before {
+		content: "";
+		width: rem(1);
+		height: rem(50);
+		position: absolute;
+		left: 0;
+		@include adaptiveValue("top", 5, 0);
+		background: $colorRed;
 	}
 }
