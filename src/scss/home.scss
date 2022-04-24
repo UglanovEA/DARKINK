@@ -223,7 +223,7 @@
 	// .works__image
 	&__image {
 		display: flex;
-		justify-self: flex-end;
+		justify-content: flex-end;
 		& img {
 			max-width: 100%;
 			height: auto;
@@ -235,11 +235,13 @@
 	}
 }
 .item-work {
-	padding: rem(10);
 	display: grid;
 	grid-template-columns: rem(65) 1fr;
 	gap: rem(15);
 	align-items: center;
+	@media (min-width: $mobile) {
+		padding: rem(10);
+	}
 	// .item-work__img
 	&__img {
 		width: rem(65);
