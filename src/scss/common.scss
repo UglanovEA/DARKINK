@@ -49,9 +49,6 @@
 	@include adaptiveValue("font-size", 50, 32);
 	font-weight: 700;
 	text-transform: uppercase;
-	&:not(:last-child) {
-		margin-bottom: em(45, 50);
-	}
 }
 ._before {
 	position: relative;
