@@ -38,7 +38,7 @@ function initSliders() {
 			observer: true,
 			observeParents: true,
 			slidesPerView: 3,
-			spaceBetween: 20,
+			spaceBetween: 25,
 			// autoHeight: true,
 			speed: 800,
 
@@ -92,7 +92,6 @@ function initSliders() {
 				},
 				992: {
 					slidesPerView: 3,
-					spaceBetween: 20,
 				},
 			},
 

@@ -299,12 +299,43 @@
 .slide-staff {
 	// .slide-staff__body
 	&__body {
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			height: rem(3);
+			background: $colorRed;
+			z-index: 2;
+		}
+		// border-bottom: rem(3) solid $colorRed;
 	}
 	// .slide-staff__img
 	&__img {
+		padding-bottom: percent(480, 420);
+		& img {
+			object-position: top center;
+		}
+	}
+	// .slide-staff__content
+	&__content {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: #1d1d1d;
+		transition: all 0.3s ease 0s;
+		padding: rem(30);
+		@media (min-width: $tablet) {
+			position: absolute;
+			left: 0;
+			bottom: rem(-60);
+		}
 	}
 	// .slide-staff__title
 	&__title {
+		color: $mainColor;
 		font-size: rem(24);
 		font-weight: 700;
 		letter-spacing: 1.2px;
@@ -319,18 +350,23 @@
 		font-size: rem(16);
 		line-height: 1.6;
 		&:not(:last-child) {
-			margin-bottom: em(10, 16);
+			margin-bottom: em(20, 16);
 		}
 	}
 	// .slide-staff__socials
 	&__socials {
 		transition: all 0.3s ease 0s;
-		opacity: 0;
+		@media (min-width: $tablet) {
+			opacity: 0;
+		}
 	}
 	@media (any-hover: hover) {
 		&:hover {
 			.slide-staff__title {
 				color: $colorRed;
+			}
+			.slide-staff__content {
+				bottom: 0;
 			}
 			.slide-staff__socials {
 				opacity: 1;
@@ -339,7 +375,61 @@
 	}
 }
 .social-slide {
+	display: flex;
+	column-gap: rem(30);
 	// .social-slide__link
 	&__link {
+		color: $colorRed;
+		font-size: rem(30);
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $mainColor;
+			}
+		}
+	}
+}
+/*==================== TESTIMONIALS ====================*/
+.testimonials {
+	position: relative;
+	@include adaptiveValue("padding-top", 50, 30);
+	@include adaptiveValue("padding-bottom", 50, 30);
+	// .testimonials__container
+	&__container {
+	}
+	// .testimonials__content
+	&__content {
+	}
+	// .testimonials__title
+	&__title {
+	}
+	// .testimonials__items
+	&__items {
+	}
+	// .testimonials__item
+	&__item {
+	}
+}
+.item-testimonial {
+	// .item-testimonial__icon
+	&__icon {
+	}
+	// .item-testimonial__text
+	&__text {
+	}
+	// .item-testimonial__content
+	&__content {
+	}
+	// .item-testimonial__img
+	&__img {
+	}
+	// .item-testimonial__title
+	&__title {
+	}
+	// .item-testimonial__subtitle
+	&__subtitle {
+		color: $colorText;
+		font-size: rem(16);
+		line-height: 1.6;
 	}
 }
