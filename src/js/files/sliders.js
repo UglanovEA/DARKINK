@@ -7,7 +7,7 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Navigation } from "swiper";
+import Swiper, { Autoplay, Navigation } from "swiper";
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay,
@@ -34,7 +34,7 @@ function initSliders() {
 			// Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			// modules: [Navigation],
+			modules: [Autoplay],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 3,
@@ -47,14 +47,12 @@ function initSliders() {
 			//preloadImages: false,
 			//lazy: true,
 
-			/*
 			// Эффекты
-			effect: 'fade',
+			effect: "fade",
 			autoplay: {
 				delay: 3000,
 				disableOnInteraction: false,
 			},
-			*/
 
 			// Пагинация
 			/*

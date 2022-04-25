@@ -4,11 +4,14 @@
 	justify-content: center;
 	position: relative;
 	color: $mainColor;
-	font-size: rem(16);
+	@include adaptiveValue("font-size", 16, 14);
 	font-weight: 500;
 	text-transform: uppercase;
 	text-align: center;
-	padding: rem(15) rem(25);
+	@include adaptiveValue("padding-right", 25, 10);
+	@include adaptiveValue("padding-left", 25, 10);
+	@include adaptiveValue("padding-top", 15, 10);
+	@include adaptiveValue("padding-bottom", 15, 10);
 	z-index: 1;
 	&:before {
 		content: "";
@@ -39,10 +42,15 @@
 		z-index: 0;
 	}
 	&:before {
-		left: 13.2%;
+		left: 0;
 	}
 	&:after {
-		right: 48%;
+		right: percent(693, 1400);
+	}
+	@media (max-width: $mobile) {
+		&:after {
+			display: none;
+		}
 	}
 }
 ._title {
@@ -56,10 +64,30 @@
 	&:before {
 		content: "";
 		width: rem(1);
-		height: rem(50);
+		@include adaptiveValue("height", 50, 30);
 		position: absolute;
 		left: 0;
 		@include adaptiveValue("top", 5, 0);
 		background: $colorRed;
+	}
+}
+.scrollTop {
+	@include adaptiveValue("width", 50, 30);
+	@include adaptiveValue("height", 50, 30);
+	position: fixed;
+	right: 2%;
+	bottom: rem(20);
+	background: $colorRed;
+	text-align: center;
+	cursor: pointer;
+	z-index: 5;
+	transition: background 0.3s ease 0s;
+	&:hover {
+		background: #c03131;
+	}
+	&:before {
+		@include adaptiveValue("font-size", 34, 20);
+		line-height: 1.5;
+		transform: rotate(180deg);
 	}
 }
