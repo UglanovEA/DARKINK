@@ -576,3 +576,77 @@
 		}
 	}
 }
+/*==================== CALLBACK ====================*/
+.callback {
+	position: relative;
+	@include adaptiveValue("padding-top", 100, 30);
+	@include adaptiveValue("padding-bottom", 50, 30);
+	// .callback__container
+	&__container {
+		display: grid;
+		grid-template-columns: 1fr rem(615);
+		gap: rem(20);
+	}
+	// .callback__img
+	&__img {
+		justify-self: center;
+		& img {
+			max-width: 100%;
+			height: auto;
+			object-fit: cover;
+		}
+	}
+	// .callback__content
+	&__content {
+	}
+	// .callback__title
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: em(45, 50);
+		}
+	}
+	// .callback__text
+	&__text {
+		color: $colorText;
+		font-size: rem(18);
+		&:not(:last-child) {
+			margin-bottom: em(30, 18);
+		}
+	}
+	// .callback__form
+	&__form {
+		display: flex;
+		flex-direction: column;
+		gap: rem(15);
+	}
+	// .callback__inp
+	&__inp {
+		position: relative;
+		&::before {
+			position: absolute;
+			left: rem(20);
+			top: 0;
+			color: $colorRed;
+			font-size: 20px;
+			line-height: 2.3;
+		}
+	}
+	// .callback__input
+	&__input {
+		width: 100%;
+		background: none;
+		color: #a1a1a1;
+		border: 1px solid #a1a1a1;
+		outline: none;
+		padding: rem(15) rem(20) rem(15) rem(50);
+	}
+	& textarea {
+		min-height: rem(200);
+		resize: none;
+		overflow: auto;
+	}
+	// .callback__btn
+	&__btn {
+		align-self: flex-start;
+	}
+}

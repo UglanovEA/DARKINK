@@ -193,7 +193,7 @@
 						</div>
 					</div>
 				</section>
-				<div class="gallery">
+				<section class="gallery">
 					<div class="gallery__container _container">
 						<div class="gallery__content _before">
 							<h2 class="gallery__title _title">gallery</h2>
@@ -235,7 +235,48 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</section>
+				<section class="callback">
+					<div class="callback__container _container">
+						<div class="callback__img">
+							<img src="@img/getintouch/person3.png" alt="person" />
+						</div>
+						<div class="callback__content _before">
+							<h2 class="callback__title _title">get in touch</h2>
+							<p class="callback__text">
+								Have any questions? Feel free to use the contact form below to get in touch with us. We will answer you as soon as possible!
+							</p>
+							<form action="#" class="callback__form">
+								<div class="callback__inp _icon-user">
+									<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Your name" class="callback__input" />
+								</div>
+								<div class="callback__inp _icon-email">
+									<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Your email" class="callback__input" />
+								</div>
+								<div class="callback__inp _icon-phone">
+									<input
+										autocomplete="off"
+										type="text"
+										name="form[]"
+										data-error="Ошибка"
+										placeholder="Your phone"
+										class="callback__input _icon-phone"
+									/>
+								</div>
+								<div class="callback__inp _icon-pencil">
+									<textarea
+										autocomplete="off"
+										name="form[]"
+										placeholder="Your message"
+										data-error="Ошибка"
+										class="callback__input _icon-pencil"
+									></textarea>
+								</div>
+								<button type="submit" class="callback__btn _btn">send message</button>
+							</form>
+						</div>
+					</div>
+				</section>
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
