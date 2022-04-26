@@ -1180,9 +1180,9 @@ body {
   margin-bottom: 0.9em;
 }
 
-.staff__slider {
+.staff__body {
   position: relative;
-  z-index: 2;
+  z-index: 5;
 }
 
 .slide-staff__body {
