@@ -2,10 +2,13 @@
 .main {
 	position: relative;
 	background: linear-gradient(180deg, rgba(31, 31, 31, 1) 37%, rgba(26, 26, 26, 1) 100%);
-	@include adaptiveValue("padding-top", 100, 80);
-	@include adaptiveValue("padding-bottom", 80, 30);
 	// .main__container
 	&__container {
+	}
+	// .main__wrapper
+	&__wrapper {
+		@include adaptiveValue("padding-top", 100, 80);
+		@include adaptiveValue("padding-bottom", 80, 30);
 	}
 	// .main__content
 	&__content {
@@ -94,15 +97,17 @@
 }
 /*==================== ABOUT ====================*/
 .about {
-	position: relative;
-	@include adaptiveValue("padding-top", 100, 30);
-	@include adaptiveValue("padding-bottom", 50, 30);
 	// .about__container
 	&__container {
+	}
+	// .about__wrapper
+	&__wrapper {
+		@include adaptiveValue("padding-top", 100, 30);
+		@include adaptiveValue("padding-bottom", 50, 30);
 		display: grid;
 		gap: rem(30);
 		@media (min-width: $mobile) {
-			grid-template-columns: 1fr percent(692, 1400);
+			grid-template-columns: 1fr percent(691, 1400);
 		}
 	}
 	// .about__images
@@ -131,6 +136,7 @@
 	// .about__image
 	&__image {
 		width: 100%;
+		transition: all 0.3s ease 0s;
 		@media (min-width: $mobileSmall) {
 			max-width: rem(270);
 		}
@@ -183,11 +189,13 @@
 }
 /*==================== WORK ====================*/
 .works {
-	position: relative;
-	@include adaptiveValue("padding-top", 50, 30);
-	@include adaptiveValue("padding-bottom", 50, 30);
 	// .works__container
 	&__container {
+	}
+	// .works__wrapper
+	&__wrapper {
+		@include adaptiveValue("padding-top", 50, 30);
+		@include adaptiveValue("padding-bottom", 50, 30);
 		@media (min-width: $tablet) {
 			display: grid;
 			grid-template-columns: 1fr percent(692, 1400);
@@ -263,11 +271,11 @@
 }
 /*==================== STAFF ====================*/
 .staff {
-	position: relative;
-	@include adaptiveValue("padding-top", 50, 30);
-	@include adaptiveValue("padding-bottom", 50, 30);
 	// .staff__container
 	&__container {
+	}
+	// .staff__wrapper
+	&__wrapper {
 	}
 	// .staff__content
 	&__content {
@@ -393,11 +401,13 @@
 }
 /*==================== TESTIMONIALS ====================*/
 .testimonials {
-	position: relative;
-	@include adaptiveValue("padding-top", 50, 30);
-	@include adaptiveValue("padding-bottom", 50, 30);
 	// .testimonials__container
 	&__container {
+	}
+	// .testimonials__wrapper
+	&__wrapper {
+		@include adaptiveValue("padding-top", 100, 30);
+		@include adaptiveValue("padding-bottom", 50, 30);
 	}
 	// .testimonials__content
 	&__content {
@@ -410,6 +420,7 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(rem(280), 1fr));
 		@include adaptiveValue("gap", 40, 20);
+		@include adaptiveValue("padding-left", 20, 10);
 	}
 	// .testimonials__item
 	&__item {
@@ -476,16 +487,18 @@
 }
 /*==================== GALLERY ====================*/
 .gallery {
-	position: relative;
 	// .gallery__container
 	&__container {
+	}
+	// .gallery__wrapper
+	&__wrapper {
 	}
 	// .gallery__content
 	&__content {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		@include adaptiveValue("margin-bottom", 45, 20);
+		@include adaptiveValue("padding-bottom", 50, 30);
 	}
 	// .gallery__title
 	&__title {
@@ -581,11 +594,13 @@
 }
 /*==================== CALLBACK ====================*/
 .callback {
-	position: relative;
-	@include adaptiveValue("padding-top", 100, 30);
-	@include adaptiveValue("padding-bottom", 50, 30);
 	// .callback__container
 	&__container {
+	}
+	// .callback__wrapper
+	&__wrapper {
+		@include adaptiveValue("padding-top", 100, 30);
+		@include adaptiveValue("padding-bottom", 50, 30);
 		@media (min-width: $mobile) {
 			display: grid;
 			grid-template-columns: 1fr percent(692, 1400);

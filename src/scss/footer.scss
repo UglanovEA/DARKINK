@@ -1,9 +1,11 @@
 .footer {
-	position: relative;
-	@include adaptiveValue("padding-top", 50, 30);
-	@include adaptiveValue("padding-bottom", 50, 30);
 	// .footer__container
 	&__container {
+	}
+	// .footer__wrapper
+	&__wrapper {
+		@include adaptiveValue("padding-top", 50, 30);
+		@include adaptiveValue("padding-bottom", 50, 30);
 		display: flex;
 		flex-wrap: wrap;
 		gap: rem(20);
