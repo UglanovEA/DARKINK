@@ -48,10 +48,10 @@ window.onload = function () {
 		origin: "right",
 		distance: "100%",
 		duration: 1500,
-		delay: 300,
+		delay: 500,
 	});
-	bg.reveal(`.main`);
-	bg.reveal(`.main__img`, { delay: 500 });
+
+	bg.reveal(`.main__img`);
 
 	const text = ScrollReveal({
 		origin: "left",

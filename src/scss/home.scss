@@ -294,11 +294,11 @@
 	}
 	// .staff__body
 	&__body {
+		position: relative;
+		z-index: 5;
 	}
 	// .staff__slider
 	&__slider {
-		position: relative;
-		z-index: 2;
 	}
 	// .staff__wrapper
 	&__wrapper {
