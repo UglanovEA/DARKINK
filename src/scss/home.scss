@@ -644,7 +644,7 @@
 	&__form {
 		display: flex;
 		flex-direction: column;
-		gap: rem(15);
+		gap: rem(25);
 	}
 	// .callback__inp
 	&__inp {
@@ -656,6 +656,12 @@
 			color: $colorRed;
 			font-size: 20px;
 			line-height: 2.3;
+		}
+		.form__error {
+			position: absolute;
+			bottom: -15px;
+			font-size: rem(10);
+			color: #e64444;
 		}
 	}
 	// .callback__input
